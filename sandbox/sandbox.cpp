@@ -631,8 +631,9 @@ int main()
 
     std::vector<std::vector<std::string>> vec2;
     iar( vec2 );
-    for([[maybe_unused]] auto & v : vec2 )
+    for(auto & v : vec2 )
     {
+      (void)v;
       assert( v[0] == "hey" );
       assert( v[1] == "there" );
       assert( v[2] == "buddy" );
